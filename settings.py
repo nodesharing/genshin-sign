@@ -21,7 +21,7 @@ class _Config:
     GIH_VERSION = '1.7.0.210301-alpha'
     WBH_VERSION = '1.0.2'
     ACT_ID = 'e202009291139501'
-    APP_VERSION = '2.3.0'
+    APP_VERSION = '2.34.1' # '2.3.0'
     REFERER_URL = 'https://webstatic.mihoyo.com/bbs/event/signin-ys/index.html?' \
                   'bbs_auth_required={}&act_id={}&utm_source={}&utm_medium={}&' \
                   'utm_campaign={}'.format('true', ACT_ID, 'bbs', 'mys', 'icon')
@@ -107,3 +107,4 @@ MESSAGE_TEMPLATE = '''
     {end:#^28}'''
 
 CONFIG.MESSAGE_TEMPLATE = MESSAGE_TEMPLATE
+
