@@ -80,7 +80,9 @@ class Sign(Base):
     @staticmethod
     def get_ds():
         # v2.3.0-web @povsister & @journey-ad
-        n = 'h8w582wxwgqvahcdkpvdhbh2w9casgfl'
+        # 2022-8-4 失效 n = 'h8w582wxwgqvahcdkpvdhbh2w9casgfl'
+        # app-version 2.34.1
+        n = '9nQiU3AV0rJSIBWgdynfoGMGKaklfbM7'
         i = str(int(time.time()))
         r = ''.join(random.sample(string.ascii_lowercase + string.digits, 6))
         c = hexdigest('salt=' + n + '&t=' + i + '&r=' + r)
