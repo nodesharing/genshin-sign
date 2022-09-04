@@ -188,8 +188,15 @@ class Sign(Base):
             code = response.get('retcode', 99999)
             # 0:      success
             # -5003:  already signed in
+            # 方便观察调试
+            log.info(response)
             if code != 0:
                 message_list.append(response)
+                continue
+            if (response["data"]["risk_code"] > 10):
+                log.error(f'旅行者 {i + 1} 受到风控，自动签到失败，推荐到米友社上签到...')
+                message_list.append( f'旅行者 {i + 1} 受到风控，自动签到失败，推荐到米友社上签到...\n risk_code={response["data"]["risk_code"]}')
+                raise Exception(f"旅行者 {i + 1} 受到风控，自动签到失败，推荐到米友社上签到...\n risk_code={response['data']['risk_code']},uid={data['uid']}")
                 continue
             message['total_sign_day'] = total_sign_day + 1
             message['status'] = response['message']
