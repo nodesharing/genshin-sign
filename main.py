@@ -41,8 +41,8 @@ print(f'检测到 {len(conf)} 个账号，正在进行任务……')
 
 
 # Options
-sct_status = os.environ.get('sct')  # https://sct.ftqq.com/
-sct_key = os.environ.get('sct_key')
+sct_status = True  # https://sct.ftqq.com/
+sct_key = 'SCT197175Tiwj4EhaG3KJjFsPExXHb7KPX'
 sct_url = f'https://sctapi.ftqq.com/{sct_key}.send?title=MHYY-AutoCheckin 自动推送'
 
 sct_msg = ''
@@ -57,12 +57,23 @@ try:
     version = json.loads(ver_info)['data']['game']['latest']['version']
     print(f'从官方API获取到云·原神最新版本号：{version}')
 except:
-    version = '4.3.0'
+    version = '4.4.0'
 
 NotificationURL = 'https://api-cloudgame.mihoyo.com/hk4e_cg_cn/gamer/api/listNotifications?status=NotificationStatusUnread&type=NotificationTypePopup&is_sort=true'
 WalletURL = 'https://api-cloudgame.mihoyo.com/hk4e_cg_cn/wallet/wallet/get'
 AnnouncementURL = 'https://api-cloudgame.mihoyo.com/hk4e_cg_cn/gamer/api/getAnnouncementInfo'
-
+NovaUrl='https://xn--rqq4a90a07rjobl00g.xn--w4r699l.xn--mmp-p18dn3y51wo4hc35ejee.com/user/checkin'
+cookie={  
+    '_ga': 'GA1.2.1682390974.1634449227',  
+    '_gid': 'GA1.2.952684167.1708425774',  
+    'uid': '31967',  
+    'email': '2658495017%40qq.com',  
+    'key': 'a5e4a80bd4ae5666f00712d614c77f20e7b0bbbeb8ef6',  
+    'ip': '6e3506cc965b4364afe079a1a41eb3d7',  
+    'expire_in': '1708512175',  
+    '_gat': '1',  
+    '_ga_YZ8GYC4WTE': 'GS1.2.1708493419.3.0.1708493419.0.0.0'  
+}
 if __name__ == '__main__':
     for config in conf:
         if config == '':
@@ -99,6 +110,7 @@ if __name__ == '__main__':
         wait_time = random.randint(1, 3600) # Random Sleep to Avoid Ban
         print(f'为了避免同一时间签到人数太多导致被官方怀疑，开始休眠 {wait_time} 秒')
         time.sleep(wait_time)
+     
         wallet = r.get(WalletURL, headers=headers, timeout=60)
         if json.loads(wallet.text) == {"data": None,"message":"登录已失效，请重新登录","retcode":-100}: 
             print(f'当前登录已过期，请重新登陆！返回为：{wallet.text}')
@@ -158,6 +170,14 @@ if __name__ == '__main__':
             else:
                 raise RunError(
                     f"签到失败！请带着本次运行的所有log内容到 https://github.com/ElainaMoe/MHYY-AutoCheckin/issues 发起issue解决（或者自行解决）。签到出错，返回信息如下：{res.text}")
+       
+        print('开始进行nova签到')
+        response = r.post(NovaUrl,cookies=cookie,timeout=60,verify=False)
+        response_str = str(response.text)
+        sct_msg += f'nova签到情况'
+        sct_msg += response_str
+        print(sct_msg)
+
         if sct_status:
             res = r.post(sct_url, json={'title': '', 'short': 'MHYY-AutoCheckin 签到情况报告', 'desp': sct_msg}, timeout=30)
             if res.status_code == 200:
@@ -165,3 +185,4 @@ if __name__ == '__main__':
             else:
                 print('sct无法推送')
                 print(res.text)
+
