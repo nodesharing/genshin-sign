@@ -4,7 +4,7 @@
 ######## 以下为账号配置项，可以多账号，详情请参考文档 ########
 accounts:
   # 第一个账号
-  - token: ai=4;ci=1;oi=295552181;ct=v2_5575a9ec65e41cb2e18f3d2bd03a2042e8438604;si=017f2f5845cb6e0ab1223702f1a8f9967cd5c7b914df265ca471c0c1cca61f23;bi=hk4e_cn
+   - token：jLB6M9zB2Wv2yPDSCtgHCz2OJu0sKPa4OoYbhYNA
     # 关于type：如果你在安卓版的云·原神里面抓的话type应该是2
     # 如果你是网页版抓的，那type应该是16
     # 此处仅供参考，具体以你抓的为准 
@@ -14,7 +14,7 @@ accounts:
     sysver: Windows 10
     # deviceid：手机抓的会有这个，抓到什么填什么
     # 如果是网页版抓的，那也是抓到什么填什么
-    deviceid: cf9e141f-2cbc-4dcc-ac22-0505a1417aa4
+    deviceid: eb5cf5c8-6948-4d87-894c-e39812a782a6
     # devicename: 手机抓的话就是手机的入网型号，如红米K40为M2012K11AC，红米K50为22021211RC
     # 如果是网页版抓的，填Unknown
     devicename: Unknown
