@@ -22,3 +22,23 @@ accounts:
     devicemodel: Unknown
     # appid: 手机抓的固定填1953439974，网页版抓的留空
     appid: 
+    # 第二个账号，不需要的话把下面删掉，如果需要更多就在下面再加
+  - token：ai=4;ci=1;oi=412062289;ct=9e44a0e54213b303762d561b98c460815335b177;si=eaa2c8b71c5646002fda083ac7c072af9a9962269d9affdcb76981a6821bd5bb;bi=hk4e_cn
+    # 关于type：如果你在安卓版的云·原神里面抓的话type应该是2
+    # 如果你是网页版抓的，那type应该是16
+    # 此处仅供参考，具体以你抓的为准 
+    type: 16
+    # sysver：如果你是安卓版抓的，这个应该会显示你的安卓版本（鸿蒙不清楚，手上没设备）
+    # 如果你是网页版抓的，这个应该是你的系统版本（注：Windows 10和Windows 11都是写的Windows 10）
+    sysver: Windows 10
+    # deviceid：手机抓的会有这个，抓到什么填什么
+    # 如果是网页版抓的，那也是抓到什么填什么
+    deviceid: 052e329e-bd73-3b9a-8f88-9b3c76249c67
+    # devicename: 手机抓的话就是手机的入网型号，如红米K40为M2012K11AC，红米K50为22021211RC
+    # 如果是网页版抓的，填Unknown
+    devicename: Unknown
+    # devicemodel: 手机抓的填抓出来的手机型号，大概为手机厂商+上面的deviceid，如红米K40为Xiaomi M2012K11AC
+    # 如果是网页版抓的，填Unknown
+    devicemodel: Unknown
+    # appid: 手机抓的固定填1953439974，网页版抓的留空
+    appid: 
