@@ -1,3 +1,4 @@
+https://github.com/shimobai/MHYY
 # MHYY-AutoCheckin
 
 ![MHYY-AutoCheckin](https://socialify.git.ci/GamerNoTitle/MHYY/image?forks=1&language=1&name=1&owner=1&stargazers=1&theme=Light)
