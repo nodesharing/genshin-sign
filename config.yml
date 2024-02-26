@@ -22,3 +22,11 @@ accounts:
     devicemodel: Unknown
     # appid: 手机抓的固定填1953439974，网页版抓的留空
     appid: 
+# 第二个账号
+  - token:ai=4;ci=1;oi=412062289;ct=9e44a0e54213b303762d561b98c460815335b177;si=eaa2c8b71c5646002fda083ac7c072af9a9962269d9affdcb76981a6821bd5bb;bi=hk4e_cn
+    type: 16
+    sysver: Windows 10
+    deviceid: 052e329e-bd73-3b9a-8f88-9b3c76249c67
+    devicename: Unknown
+    devicemodel: Unknown
+    appid: 
