@@ -42,7 +42,7 @@ print(f'检测到 {len(conf)} 个账号，正在进行任务……')
 
 # Options
 sct_status = True  # https://sct.ftqq.com/
-sct_key = 'SCT197175Tiwj4EhaG3KJjFsPExXHb7KPX'
+sct_key = 'SCT197175TVcXinkYCIWTsKBDcKghhabzo'
 sct_url = f'https://sctapi.ftqq.com/{sct_key}.send?title=MHYY-AutoCheckin 自动推送'
 
 sct_msg = ''
@@ -62,17 +62,17 @@ except:
 NotificationURL = 'https://api-cloudgame.mihoyo.com/hk4e_cg_cn/gamer/api/listNotifications?status=NotificationStatusUnread&type=NotificationTypePopup&is_sort=true'
 WalletURL = 'https://api-cloudgame.mihoyo.com/hk4e_cg_cn/wallet/wallet/get'
 AnnouncementURL = 'https://api-cloudgame.mihoyo.com/hk4e_cg_cn/gamer/api/getAnnouncementInfo'
-NovaUrl='https://xn--rqq4a90a07rjobl00g.xn--w4r699l.xn--mmp-p18dn3y51wo4hc35ejee.com/user/checkin'
+NovaUrl='https://nova.live/user/checkin'
 cookie={  
-    '_ga': 'GA1.2.1682390974.1634449227',  
-    '_gid': 'GA1.2.952684167.1708425774',  
+    '_ga': 'GA1.2.1762496858.1632027040',  
+    '_gid': 'GA1.2.1796609746.1716033102',  
+    '_gat': '1',  
     'uid': '31967',  
     'email': '2658495017%40qq.com',  
-    'key': 'a5e4a80bd4ae5666f00712d614c77f20e7b0bbbeb8ef6',  
-    'ip': '6e3506cc965b4364afe079a1a41eb3d7',  
-    'expire_in': '1708512175',  
-    '_gat': '1',  
-    '_ga_YZ8GYC4WTE': 'GS1.2.1708493419.3.0.1708493419.0.0.0'  
+    'key': '20b4ea977a73e1329bd9d46753838d12da5c45bd3dfb4',  
+    'ip': '52f66141fdd3e8aa351171fcb2026d78',  
+    'expire_in': '1718625199',  
+    '_ga_YZ8GYC4WTE': 'GS1.2.1716033102.32.1.1716033203.0.0.0'  
 }
 if __name__ == '__main__':
     for config in conf:
@@ -185,4 +185,3 @@ if __name__ == '__main__':
             else:
                 print('sct无法推送')
                 print(res.text)
-
